@@ -1,4 +1,4 @@
-<?php
+ <?php
 namespace Views;
 new Template();
 class Template
