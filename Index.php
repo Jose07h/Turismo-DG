@@ -6,7 +6,7 @@
 
 
 
-    define('URL',"http://localhost/AppWeb/TIENDA-EN-LINEA");
+    define('URL',"http://localhost/Appweb/Turismo-DG/");
 
 
     require_once ("AppData/Config/Autoload.php");
