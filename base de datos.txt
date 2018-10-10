@@ -1,8 +1,7 @@
-Create database Malacatepec;
+create database Malacatepec;
 use Malacatepec;
-create table Actividades(id_actividad int primary key, id_tipoact int, descripcion text);
+create table Actividades (id_actividad int primary key, id_tipoact int, descripcion text);
 create table Tipo_act(id_tipoact int primary key, descripcion varchar (50));
 create table Asigna_act(id_asigna int primary key,id_actividad int,id_horario int,id_dia int);
 create table Horario(id_horario int primary key, hora time);
 create table Dias(id_dias int primary key, dias varchar(15));
-------
