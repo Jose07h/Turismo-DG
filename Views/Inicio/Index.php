@@ -1,7 +1,7 @@
 <?php
 ?>
 
-      <div class="container md-14" id="">
+      <div class="container-fluid md-12" id="">
           <div class="row">
             <div class="col-md-12">
                 <div id="carouselExampleIndicators" class="carousel slide bg-light" data-ride="carousel">

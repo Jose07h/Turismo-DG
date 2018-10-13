@@ -32,5 +32,8 @@ class Enrutador
             require_once ($ruta);
         else
             echo "Esta página no existe";
+        ?>
+        
+        <?php
     }
 }
