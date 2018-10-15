@@ -31,31 +31,21 @@ class Template
           </head>
         <body>
         <header>
-          <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-white flex-md-nowrap p-0 shadow">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">                
-                <img src="<?php echo URL?>Public/img/log_sn.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+                <img src="<?php echo URL?>Public/img/mexico.jpg" width="250px" alt="Thumbnail Image" class="img-raised  img-fluid" >
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="<?php echo URL?>inicio">  Campamento Malacatepec <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="<?php echo URL?>inicio"> <font color="black" face="Arial,Verdana" size="8" > Conociendo Donato Guerra <span class="sr-only">(current)</span></font></a>
               </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="<?php echo URL?>inicio">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo URL?>Login">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo URL?>Agregar">Agregar</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="<?php echo URL?>User">User</a>
-              </li>
-              <li class="nav-item dropdown">
+
+
+                <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Otras</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="#">Guias</a>
