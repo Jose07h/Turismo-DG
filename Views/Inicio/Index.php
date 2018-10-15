@@ -14,19 +14,19 @@
                     </ol>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img class="d-block w-100"  src="<?php echo URL?>Public/img/pintura.jpg" alt="First slide" width="70px" height="650">
+                        <img class="d-block w-100"  src="<?php echo URL?>Public/img/casca.jpg" alt="First slide" width="90px" height="650">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo URL?>Public/img/baile.jpg" alt="Second slide" width="90px" height="650">
+                        <img class="d-block w-100" src="<?php echo URL?>Public/img/fondo.jpg" alt="Second slide" width="90px" height="650">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo URL?>Public/img/piedra.jpg" alt="Fourth slide" width="90px" height="650">
+                        <img class="d-block w-100" src="<?php echo URL?>Public/img/mira.jpg" alt="Fourth slide" width="90px" height="650">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo URL?>Public/img/bordado.jpg" alt="Five slide" width="90px" height="650">
+                        <img class="d-block w-100" src="<?php echo URL?>Public/img/mari.jpg" alt="Five slide" width="90px" height="650">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo URL?>Public/img/artesa.jpg" alt="Six slide" width="90px" height="650">
+                        <img class="d-block w-100" src="<?php echo URL?>Public/img/entra.jpg" alt="Six slide" width="90px" height="650">
                       </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">

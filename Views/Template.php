@@ -41,7 +41,7 @@ class Template
                 <img src="<?php echo URL?>Public/img/mexico.jpg" width="250px" alt="Thumbnail Image" class="img-raised  img-fluid" >
               </li>
               <li class="nav-item active">
-                  <a class="nav-link" href="<?php echo URL?>inicio"> <font color="black" face="Arial,Verdana" size="8" > Conociendo Donato Guerra <span class="sr-only">(current)</span></font></a>
+                    <a class="nav-link" href="<?php echo URL?>inicio"> <font color="black" face="Arial,Verdana" size="9"  > Conociendo Donato Guerra <span class="sr-only">(current)</span></font></a>
               </li>
 
 
