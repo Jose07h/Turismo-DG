@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbf46ef4-3698-41ea-aeda-1d2db57c3a0e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Views/Actividades/index.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/Views/Actividades/index.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Views/Template.php" afterPath="$PROJECT_DIR$/Views/Template.php" />
+      <change beforePath="$PROJECT_DIR$/Views/Actividades/index.php" afterPath="$PROJECT_DIR$/Views/Actividades/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,8 +18,8 @@
       <file leaf-file-name="Template.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Views/Template.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="7" selection-end-column="2" />
+            <state relative-caret-position="437">
+              <caret line="19" column="16" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="19" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -27,6 +27,16 @@
       </file>
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Views/Actividades/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5060">
+              <caret line="220" column="29" lean-forward="true" selection-start-line="220" selection-start-column="29" selection-end-line="220" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Views/Actividades/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -36,6 +46,13 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -48,6 +65,7 @@
         <option value="$PROJECT_DIR$/Views/Inicio/Index.php" />
         <option value="$PROJECT_DIR$/Views/Template.php" />
         <option value="$PROJECT_DIR$/Views/Actividades/index.php" />
+        <option value="$PROJECT_DIR$/Views/Actividades/index.html" />
       </list>
     </option>
   </component>
@@ -122,6 +140,12 @@
               <item name="Turismo-DG" type="b2602c69:ProjectViewProjectNode" />
               <item name="Turismo-DG" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Actividades" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Turismo-DG" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Turismo-DG" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Agregar" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -153,6 +177,8 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Prueba/startbootstrap-grayscale-gh-pages" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -181,12 +207,12 @@
       <updated>1539141804369</updated>
       <workItem from="1539141816130" duration="4003000" />
       <workItem from="1539572669826" duration="4281000" />
-      <workItem from="1539579510037" duration="2062000" />
+      <workItem from="1539579510037" duration="3030000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10346000" />
+    <option name="totallyTimeSpent" value="11314000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -376,16 +402,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/Template.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="7" selection-end-column="2" />
+        <state relative-caret-position="437">
+          <caret line="19" column="16" lean-forward="true" selection-start-line="10" selection-start-column="8" selection-end-line="19" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Actividades/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Views/Actividades/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="5060">
+          <caret line="220" column="29" lean-forward="true" selection-start-line="220" selection-start-column="29" selection-end-line="220" selection-end-column="29" />
           <folding />
         </state>
       </provider>
