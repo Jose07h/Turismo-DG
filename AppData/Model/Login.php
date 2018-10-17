@@ -34,4 +34,12 @@ class Login
         $dato=$this->conexion->QueryResultado($sql);
         return $dato;
     }
+public function registro()
+    {
+        $sql="SELECT * FROM {$this->tabla} where user='{$this->email}' and con='{$this->pass}'";
+        print_r($sql);
+        $dato=$this->conexion->QueryResultado($sql);
+        return $dato;
+    }
+
 }

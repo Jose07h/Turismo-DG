@@ -7,7 +7,7 @@ class conexion
 {
 
     private $datos=array("server"=>"localhost","user"=>"root","password"=>"", "base"=>"Malacatepec");
-
+    public $stm;
 
 
     private $conexion;
@@ -21,6 +21,15 @@ class conexion
     public function QuerySimple($sql)
     {
         $this->conexion->query($sql) or die (mysqli_error($this->conexion));
+    }
+    public function proc($a,$b,$c,$d)
+    {
+        echo $b,$a;
+        $sql="insert into img(titulo,fecha,img,descr) values(?,?,?,?)";
+        $stm=$this->conexion->prepare($sql) or die (mysqli_error($this->conexion));
+        $stm->bind_param('ssss',$a,$b,$c,$d);
+        $stm->execute();
+
     }
     public function QueryResultado($sql)
     {

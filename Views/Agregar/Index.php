@@ -1,6 +1,6 @@
 <?php
 ?>
- <form class="needs-validation" novalidate>
+ <form class="needs-validation"  method="POST" action="<?php echo URL?>agregar/crear" novalidate id="save_img" enctype="multipart/form-data" autocomplete="off">
     <div class="container justify-content-md-center">
       <div class="py-5 text-center">
         <h2>Agregar</h2>
@@ -11,7 +11,7 @@
           <form class="needs-validation" novalidate>
             <div class="mb-3">
               <label for="titulo">Titulo</label>
-                <input type="text" class="form-control" id="titulo" placeholder="Titulo" required>
+                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="titulo" required>
                 <div class="invalid-feedback" style="width: 100%;">
                   El titulo es requerido
                 </div>
@@ -19,7 +19,7 @@
             <div class="mb-3">
               <label for="fecha">Fecha</label>
               <div class="input-group">
-                <input type="text" class="form-control" id="fecha" placeholder="fecha" required>
+                <input type="text" class="form-control" id="fecha" name="fecha"placeholder="fecha" required>
                 <div class="invalid-feedback" style="width: 100%;">
                   la fecha es requerida
                 </div>
@@ -28,14 +28,16 @@
             <div class="mb-3">
               <label for="imagen">Selecionar imagen</label>
               <div class="custom-file">
-                <input type="file" class="custom-file-input" id="imagen" required>
+                <input type="file" class="custom-file-input" id="imagen" name="imagen"required>
+
                 <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
                 <div class="invalid-feedback" style="width: 100%;">Es nesesario selecionar una imagen</div>
               </div>
             </div>          
+
             <div class="mb-5">
               <label for="descripcion">Descripcion</label>
-              <textarea class="form-control" id="descripcion" rows="3" required></textarea>
+              <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required></textarea>
               <div class="invalid-feedback" style="width: 100%;">
                   descripcion requerida
                 </div>
@@ -45,35 +47,27 @@
         </div>
       </div>
       <div class="row justify-content-md-center">
-        <button class="btn btn-primary " type="submit">Submit form</button>
+        <button href="#!" class="btn btn-primary " id="enviar" data-id="" type="submit">Enviar</button>
+      </div>    
+      <div id="carga">
+        
       </div>
-    
-            <br>  
-            <br>  
-            <br>  
-            <br>  
-            <br>  
-            <br>  
+      <table> 
+        <thead>
+          <tbody id="body" name="body">
+
+            
+          </tbody>    
+        </thead>
+      </table>
+          <br>  
+          <br>  
+          <br>  
+          <br>  
+          <br>  
+          <br>  
   </form>
-    <script>
-      (function() {
-        'use strict';
 
-        window.addEventListener('load', function() {
-          // Fetch all the forms we want to apply custom Bootstrap validation styles to
-          var forms = document.getElementsByClassName('needs-validation');
 
-          // Loop over them and prevent submission
-          var validation = Array.prototype.filter.call(forms, function(form) {
-            form.addEventListener('submit', function(event) {
-              if (form.checkValidity() === false) {
-                event.preventDefault();
-                event.stopPropagation();
-              }
-              form.classList.add('was-validated');
-            }, false);
-          });
-        }, false);
-      })();
-    </script>
+
   

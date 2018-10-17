@@ -13,10 +13,12 @@ class Template
         <link rel="stylesheet" href="<?php echo URL ?>Public/css/bootstrap.min.css">
 
         <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/jquery-slim.min.js"></script>
+        <script type="text/javascript" src="<?php echo URL ?>Public/js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/popper.min.js"></script>
         <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/holder.min.js"></script>
         <script type="text/javascript" src="<?php echo URL ?>Public/js/bootstrap.min.js" ></script>
-        <script type="text/javascript" src="<?php echo URL ?>Public/js/feather.min.js" ></script>
+        <!--<script type="text/javascript" src="<?php //echo URL ?>Public/js/feather.min.js"></script>-->
+        <script type="text/javascript" src="<?php echo URL?>Public/js/jquery.validate.min.js"></script>
         <script>
             $(document).on("ready",function(){
                 $('.carousel').carousel({
@@ -28,12 +30,11 @@ class Template
             <title>Principal</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
           </head>
         <body>
         <header>
 
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
                 <img src="<?php echo URL?>Public/img/logo_trans.png" width="150px" alt="Thumbnail Image" class="img-raised  img-fluid">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
                     <span class="navbar-toggler-icon"></span>
@@ -50,14 +51,14 @@ class Template
                             <a class="nav-link" href="#">Artesanias</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Views/Login/index.php">Login</a>
+                            <a class="nav-link" href="<?php echo URL ?>Login">Login</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Actividades
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="Views/Actividades/index.php">Campismo</a>
+                                <a class="dropdown-item" href="<?php echo URL ?>Actividades">Campismo</a>
                                 <a class="dropdown-item" href="#">Ciclismo</a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#">Something else here</a>
@@ -73,6 +74,7 @@ class Template
 
         </header>
         <main class="container-fluid md-12">
+            <br><br><br>
     <?php
     }
     public static function footer()

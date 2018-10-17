@@ -38,4 +38,8 @@ class loginController
             session_destroy();
            // header("Location:".URL);
         }
+        public function registro(){
+
+        }
+
 }
