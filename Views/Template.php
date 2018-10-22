@@ -8,12 +8,14 @@ class Template
 ?>
         <!DOCTYPE html>
         <html>
-        <link href="<?php echo URL ?>Public/css/blog.css" rel="stylesheet">
+        js/jquery-3.<link href="<?php echo URL ?>Public/css/blog.css" rel="stylesheet">
         <link href="<?php echo URL ?>Public/css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="<?php echo URL ?>Public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>Public/css/sweet-alert.min.css">
 
+        <script type="text/javascript" src="<?php echo URL ?>Public/sweet-alert.min.js"></script>
         <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/jquery-slim.min.js"></script>
-        <script type="text/javascript" src="<?php echo URL ?>Public/js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="<?php echo URL ?>Public/3.1.min.js"></script>
         <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/popper.min.js"></script>
         <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/holder.min.js"></script>
         <script type="text/javascript" src="<?php echo URL ?>Public/js/bootstrap.min.js" ></script>
