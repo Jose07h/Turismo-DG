@@ -11,21 +11,25 @@ class Template
         <!DOCTYPE html>
         <html>
         <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-            <title>Principal</title>
-            <link href="<?php echo URL ?>Public/css/blog.css" rel="stylesheet">
-            <link href="<?php echo URL ?>Public/css/style.css" rel="stylesheet">
-            <link rel="stylesheet" href="<?php echo URL ?>Public/css/bootstrap.min.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Principal</title>
+        <head>
+        <link href="<?php echo URL ?>Public/css/blog.css" rel="stylesheet">
+        <link href="<?php echo URL ?>Public/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="<?php echo URL ?>Public/css/bootstrap.min.css">
+        <link rel="stylesheet" href="<?php echo URL ?>Public/css/sweet-alert.min.css">
 
-            <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/jquery-slim.min.js"></script>
-            <script type="text/javascript" src="<?php echo URL ?>Public/js/jquery-3.3.1.min.js"></script>
-            <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/popper.min.js"></script>
-            <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/holder.min.js"></script>
-            <script type="text/javascript" src="<?php echo URL ?>Public/js/bootstrap.min.js" ></script>
-            <!--<script type="text/javascript" src="<?php //echo URL ?>Public/js/feather.min.js"></script>-->
-            <script type="text/javascript" src="<?php echo URL ?>Public/js/jquery.validate.min.js"></script>        
+        <script type="text/javascript" src="<?php echo URL ?>Public/js/sweet-alert.min.js"></script>
+        <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/jquery-slim.min.js"></script>
+        <script type="text/javascript" src="<?php echo URL ?>Public/js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/popper.min.js"></script>
+        <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/holder.min.js"></script>
+        <script type="text/javascript" src="<?php echo URL ?>Public/js/bootstrap.min.js" ></script>
+        <!--<script type="text/javascript" src="<?php //echo URL ?>Public/js/feather.min.js"></script>-->
+        <script type="text/javascript" src="<?php echo URL?>Public/js/jquery.validate.min.js"></script>
         </head>
+
         <body>  
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
                 <img src="<?php echo URL?>Public/img/logo_trans.png" width="150px" alt="Thumbnail Image" class="img-raised  img-fluid">
