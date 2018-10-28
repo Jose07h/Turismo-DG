@@ -16,7 +16,7 @@ while($row=mysqli_fetch_array($dato))
 		             <div>
 		             	<a href='".URL."user/eliminar/{$row[0]}' class='btn tooltipped' data-position='bottom' data-tooltip='Eliminarr'>Eliminar       		
 		             	</a>
-		             	<a href='".URL."estado_habitaciones/modificar/{$row[0]}' class='btn'>
+		             	<a href='".URL."user/modificar/{$row[0]}' class='btn'>
 		             		Modificar
 		             	</a>
 		             </div> 		              

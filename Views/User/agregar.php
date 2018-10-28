@@ -1,6 +1,6 @@
 <?php
 ?>
- <form class="needs-validation"  method="POST" action="<?php echo URL?>agregar/crear" novalidate id="save_img" enctype="multipart/form-data" autocomplete="off">
+ <form class="needs-validation"  method="POST" action="<?php echo URL?>User/agregar" novalidate id="save_img" enctype="multipart/form-data" autocomplete="off">
     <div class="container justify-content-md-center">
       <div class="py-5 text-center">
         <h2>Agregar</h2>
@@ -55,8 +55,6 @@
       <table> 
         <thead>
           <tbody id="body" name="body">
-
-            
           </tbody>    
         </thead>
       </table>
@@ -66,8 +64,4 @@
           <br>  
           <br>  
           <br>  
-  </form>
-
-
-
-  
+  </form>  

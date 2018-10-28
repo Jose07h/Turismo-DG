@@ -1,6 +1,8 @@
 <?php
+
 namespace Views;
 new Template();
+ob_start();
 class Template
 {
     public static function header()
@@ -149,3 +151,4 @@ class Template
         <?php
     }
 }
+ob_start();

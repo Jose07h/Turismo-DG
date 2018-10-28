@@ -24,10 +24,18 @@ class conexion
     }
     public function proc($a,$b,$c,$d)
     {
-        echo $b,$a;
         $sql="insert into img(titulo,fecha,img,descr) values(?,?,?,?)";
         $stm=$this->conexion->prepare($sql) or die (mysqli_error($this->conexion));
         $stm->bind_param('ssss',$a,$b,$c,$d);
+        $stm->execute();
+
+    }
+    public function proc2($a,$b,$c,$d,$e)
+
+    {
+        $sql="update img set titulo=?,fecha=?, img=?, descr=? where id=?";
+        $stm=$this->conexion->prepare($sql) or die (mysqli_error($this->conexion));
+        $stm->bind_param('sssss',$a,$b,$c,$d,$e);
         $stm->execute();
 
     }
