@@ -15,7 +15,7 @@
             <h1 class="h2">Agregados</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
-                <a class="nav-link btn btn-sm btn-outline-secondary" href="<?php echo URL ?>user/agregar">
+                <a class="nav-link btn btn-sm btn-outline-secondary" href="<?php echo URL ?>tipos/agregar">
                   Agregar
                 </a>
               </div>

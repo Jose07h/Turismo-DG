@@ -6,24 +6,28 @@ class inicio
     private $email, $pass;
     public function __construct()
     {
-        //$this->conexion= new conexion();
+        $this->conexion= new conexion();
     }
 
     public function set($atributo,$valor)
     {
-        //$this->$atributo=$valor;
+        $this->$atributo=$valor;
     }
 
     public function get($atributo)
     {
-        //return $this->$atributo;
+        return $this->$atributo;
     }
-
-    public function verify()
+    function getTipo($tipo)
     {
-        ///$sql="SELECT * FROM {$this->tabla} where email='{$this->email}' and pass='{$this->pass}'";
-        //print_r($sql);
-        //$dato=$this->conexion->QueryResultado($sql);
-        //return $dato;
+        $sql="SELECT * from img where tipo_id='{$tipo}'";
+        $datos=$this->conexion->QueryResultado($sql);
+        return $datos;
+    }
+    function getAll()
+    {
+        $sql="SELECT * from tipos";
+        $datos=$this->conexion->QueryResultado($sql);
+        return $datos;
     }
 }

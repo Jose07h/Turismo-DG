@@ -30,8 +30,15 @@ class conexion
         $stm->execute();
 
     }
-    public function proc2($a,$b,$c,$d,$e)
+    public function tiposadd($c,$d)
+    {
+        $sql="insert into tipos(img,descr) values(?,?)";
+        $stm=$this->conexion->prepare($sql) or die (mysqli_error($this->conexion));
+        $stm->bind_param('ss',$c,$d);
+        $stm->execute();
 
+    }
+    public function proc2($a,$b,$c,$d,$e)
     {
         $sql="update img set titulo=?,fecha=?, img=?, descr=? where id=?";
         $stm=$this->conexion->prepare($sql) or die (mysqli_error($this->conexion));
@@ -39,6 +46,15 @@ class conexion
         $stm->execute();
 
     }
+    public function tiposup($c,$d,$e)
+    {
+        $sql="update tipos set  img=?, descr=? where id=?";
+        $stm=$this->conexion->prepare($sql) or die (mysqli_error($this->conexion));
+        $stm->bind_param('sss',$c,$d,$e);
+        $stm->execute();
+
+    }
+    
     public function QueryResultado($sql)
     {
         $datos=$this->conexion->query($sql) or die (mysqli_error($this->conexion));

@@ -6,10 +6,10 @@
  * Time: 12:06 PM
  */
 namespace AppData\Model;
-class User
+class tipos
 {
-    private $tabla="img";
-    private $id, $fecha,$img,$descr,$titulo;
+    private $tabla="tipos";
+    private $id,$img,$descr;
     function __construct()
     {
         $this->conexion=new conexion();
@@ -26,14 +26,14 @@ class User
     }
     function getAll()
     {
-        $sql="SELECT * from img";
+        $sql="SELECT * from tipos";
         $datos=$this->conexion->QueryResultado($sql);
         return $datos;
     }
     
     function add()
     {    
-        $stm=$this->conexion->proc($this->titulo,$this->fecha,$this->img,$this->descr);
+        $stm=$this->conexion->tiposadd($this->img,$this->descr);
     }
     function delete($id)
     {
@@ -42,18 +42,18 @@ class User
     }
     function edit($id)
     {
-        $sql="select id,titulo,fecha,img,descr from {$this->tabla} where id='{$id}'";
+        $sql="select id,img,descr from {$this->tabla} where id='{$id}'";
         $datos=$this->conexion->queryResultado($sql);
         return $datos;
     }
     function getOne($id)
     {
-        $sql="SELECT * FROM img where id='{$id}'";
+        $sql="SELECT * FROM tipos where id='{$id}'";
         $datos=$this->conexion->QueryResultado($sql);
         return $datos;
     }
     function update(){
-        $stm=$this->conexion->proc2($this->titulo,$this->fecha,$this->img,$this->descr,$this->id);
+        $stm=$this->conexion->tiposup($this->img,$this->descr,$this->id);
         
     }
 }

@@ -6,7 +6,7 @@
  * Time: 12:06 PM
  */
 namespace AppData\Model;
-class User
+class exa
 {
     private $tabla="img";
     private $id, $fecha,$img,$descr,$titulo;
@@ -26,7 +26,7 @@ class User
     }
     function getAll()
     {
-        $sql="SELECT * from img";
+        $sql="SELECT * from nombre";
         $datos=$this->conexion->QueryResultado($sql);
         return $datos;
     }

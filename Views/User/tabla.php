@@ -1,6 +1,5 @@
 <?php
 $dato=$datos[0];
-
 while($row=mysqli_fetch_array($dato))
 {
 	echo "

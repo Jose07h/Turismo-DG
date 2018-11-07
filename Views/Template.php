@@ -11,25 +11,23 @@ class Template
         <!DOCTYPE html>
         <html>
         <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Principal</title>
-        <head>
-        <link href="<?php echo URL ?>Public/css/blog.css" rel="stylesheet">
-        <link href="<?php echo URL ?>Public/css/style.css" rel="stylesheet">
-        <link rel="stylesheet" href="<?php echo URL ?>Public/css/bootstrap.min.css">
-        <link rel="stylesheet" href="<?php echo URL ?>Public/css/sweet-alert.min.css">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta charset="utf-8">
+            <title>Principal</title>
+            <link href="<?php echo URL ?>Public/css/blog.css" rel="stylesheet">
+            <link href="<?php echo URL ?>Public/css/style.css" rel="stylesheet">
+            <link rel="stylesheet" href="<?php echo URL ?>Public/css/bootstrap.min.css">
+            <link rel="stylesheet" href="<?php echo URL ?>Public/css/sweet-alert.min.css">
 
-        <script type="text/javascript" src="<?php echo URL ?>Public/js/sweet-alert.min.js"></script>
-        <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/jquery-slim.min.js"></script>
-        <script type="text/javascript" src="<?php echo URL ?>Public/js/jquery-3.3.1.min.js"></script>
-        <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/popper.min.js"></script>
-        <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/holder.min.js"></script>
-        <script type="text/javascript" src="<?php echo URL ?>Public/js/bootstrap.min.js" ></script>
-        <!--<script type="text/javascript" src="<?php //echo URL ?>Public/js/feather.min.js"></script>-->
-        <script type="text/javascript" src="<?php echo URL?>Public/js/jquery.validate.min.js"></script>
+            <script type="text/javascript" src="<?php echo URL ?>Public/js/sweet-alert.min.js"></script>
+            <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/jquery-slim.min.js"></script>
+            <script type="text/javascript" src="<?php echo URL ?>Public/js/jquery-3.3.1.min.js"></script>
+            <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/popper.min.js"></script>
+            <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/holder.min.js"></script>
+            <script type="text/javascript" src="<?php echo URL ?>Public/js/bootstrap.min.js" ></script>
+            <!--<script type="text/javascript" src="<?php //echo URL ?>Public/js/feather.min.js"></script>-->
+            <script type="text/javascript" src="<?php echo URL?>Public/js/jquery.validate.min.js"></script>
         </head>
-
         <body>  
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
                 <img src="<?php echo URL?>Public/img/logo_trans.png" width="150px" alt="Thumbnail Image" class="img-raised  img-fluid">
@@ -74,6 +72,11 @@ class Template
                                 </a>
                             </div>
                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link" href="<?php echo URL ?>user">
+                                user(tmp)
+                            </a>
+                        </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
@@ -103,10 +106,24 @@ class Template
                         </div>
                         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                             <h5 class="text-uppercase mb-4 font-weight-bold">Ubicación</h5>
-                            <div>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15061.361392893625!2d-100.15055793305281!3d19.31103209125391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d29e7e699ac01f%3A0x54fbeac5bbe65d12!2sVilla+Donato+Guerra%2C+M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1539572910254" width="300" height="270" frameborder="0" style="border:0" allowfullscreen></iframe>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Mapa</button>
+                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-secondary" id="exampleModalLabel">Ubicación</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                        </button>
+                                      </div>
+                                    <div>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15061.361392893625!2d-100.15055793305281!3d19.31103209125391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d29e7e699ac01f%3A0x54fbeac5bbe65d12!2sVilla+Donato+Guerra%2C+M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1539572910254" width="798" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    </div>            
+                                </div>
+                              </div>
                             </div>
                         </div>
+                            
                         <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
                             <h5 class="text-uppercase mb-4 font-weight-bold">Quejas y sugerencias</h5>
                         </div>                    

@@ -1,11 +1,11 @@
 <?php
 namespace AppData\Controller;
-class userController
+class exaController
 {
     private $user,$Tipo_tarea,$empleados,$habitaciones,$herramientas;
     public function __construct()
     {
-        $this->user= new \AppData\Model\User();    
+        $this->user= new \AppData\Model\exa();    
     }
     public function index()
     {

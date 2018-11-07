@@ -1,7 +1,7 @@
 <?php
 ?>
 
-      <div class="container-fluid md-12" id="" >
+  <div class="container-fluid md-12" id="" >
           <div class="row" >
             <div class="col-md-12">
                 <div  id="carouselExampleIndicators" class="carousel slide bg-light" data-ride="carousel">
@@ -40,4 +40,17 @@
                 </div>    
               </div>
           </div>
-        </div>
+          <br>
+          <br>
+          <br>
+    <div class="container pie">
+      <div class="row" id="lista">
+        <?php
+          require_once ("tabla.php");
+       ?>
+      </div>                        
+    </div>          
+  </div>
+  <br>
+  <br>
+  <br>

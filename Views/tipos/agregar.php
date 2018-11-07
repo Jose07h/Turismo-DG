@@ -1,30 +1,14 @@
 <?php
 ?>
- <form class="needs-validation"  method="POST" action="<?php echo URL?>User/agregar" novalidate id="save_img" enctype="multipart/form-data" autocomplete="off">
+ <form class="needs-validation"  method="POST" action="<?php echo URL?>tipos/agregar" novalidate id="save_img" enctype="multipart/form-data" autocomplete="off">
     <div class="container justify-content-md-center">
       <div class="py-5 text-center">
         <h2>Agregar</h2>
-        <p class="lead">Agrega nuevas historias de dentro de las areas registradas</p>
+        <p class="lead">Agrega tipos de historias para posteriormente clasificar cada historia agregada</p>
       </div>
       <div class="row justify-content-md-center">
         <div class="col-md-8 order-md-1">
-          <form class="needs-validation" novalidate>
-            <div class="mb-3">
-              <label for="titulo">Titulo</label>
-                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="titulo" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                  El titulo es requerido
-                </div>
-            </div>
-            <div class="mb-3">
-              <label for="fecha">Fecha</label>
-              <div class="input-group">
-                <input type="date" class="form-control" id="fecha" name="fecha"placeholder="fecha" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                  la fecha es requerida
-                </div>
-              </div>
-            </div>
+          <form class="needs-validation" novalidate>            
             <div class="mb-3">
               <label for="imagen">Selecionar imagen</label>
               <div class="custom-file">
