@@ -88,6 +88,27 @@ class Template
             <br>
             <br>
             <br>
+<form method="post" action="Comentar.php">
+    <div class="col-md-10 clear"><hr><h3>Describir un comentario</h3>
+    </div>
+    <div class="col-md-10">
+        <div class="container-fluid well span8">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form accept-charset="UTF-8" action="" method="POST">
+                        <textarea class="form-control counted" name="message" placeholder="Escribir aqui" rows="5" style="margin-bottom:10px;"></textarea>
+                        <h6 class="pull-right" id="counter">320 caracteres maximo</h6>
+                        <button class="btn btn-info" type="submit" value="publicar">Comentar</button>
+                    </form>
+                    <?php include ("AppData/Controller/com.html");
+                    include ("AppData/Model/Comentar.php");?>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+
     <?php
     }
     public static function footer()
