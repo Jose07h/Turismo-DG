@@ -1,7 +1,7 @@
 <?php
 $row=mysqli_fetch_array($datos);
 ?>
- <form class="needs-validation"  method="POST" action="<?php echo URL?>tipos/actualizar" novalidate id="save_img" enctype="multipart/form-data" autocomplete="off">
+ <form class="was-validated"  method="POST" action="<?php echo URL?>tipos/actualizar" novalidate id="save_img" enctype="multipart/form-data" autocomplete="off">
     <div class="container justify-content-md-center">
       <div class="py-5 text-center">
         <h2>Actualizar</h2>
@@ -13,9 +13,8 @@ $row=mysqli_fetch_array($datos);
             <div class="mb-3">
               <input type="hidden" name="id" value="<?php echo $row[0]?>">
               <label for="imagen">Selecionar imagen</label>
-              <div class="custom-file">
-                <input type="file" class="custom-file-input " id="imagen" name="imagen"  required value="data:image/jpg; base64, <?php echo base64_encode($row[1]); ?>">
-                <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+              <div class="form-goup">
+                <input type="file" class="form-control" id="imagen" name="imagen"  required value="data:image/jpg; base64, <?php echo base64_encode($row[1]); ?>" required>
                 <div class="invalid-feedback" style="width: 100%;">Es nesesario selecionar una imagen</div>
               </div>
             </div>          

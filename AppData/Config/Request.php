@@ -47,16 +47,15 @@ class Request
 
 
             if(isset($_POST["nombre"]))
-
                 $this->metodo = "verify";
-
+            else if(isset($_POST["numero"]))
+                $this->metodo = "reset";        
             else
                 $this->metodo = "index";
         }
         else if (isset($_GET['url'])?stristr($_GET['url'],'inicio'):false)
         {
             $this->controlador="inicio";
-
             $this->metodo=stristr($_GET['url'],'show()')?"show()":"index";
         }
         else

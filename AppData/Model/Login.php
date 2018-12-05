@@ -3,7 +3,7 @@ namespace AppData\Model;
 class Login
 {
     private $tabla="usuario";
-    private $nombre, $pass;
+    private $nombre, $pass,$user, $telefono;
     public function __construct()
     {
         $this->conexion= new conexion();
@@ -27,6 +27,12 @@ class Login
 public function comprobar()
     {
         $sql="SELECT * FROM {$this->tabla} where nombre='{$this->nombre}' and pass='{$this->pass}'";
+        $dato=$this->conexion->QueryResultado($sql);
+        return $dato;
+    }
+    public function recuperar()
+    {
+        $sql="SELECT pass FROM {$this->tabla} where nombre='{$this->nombre}' and user='{$this->user}' and telefono='{$this->telefono}'";
         $dato=$this->conexion->QueryResultado($sql);
         return $dato;
     }

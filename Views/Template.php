@@ -70,11 +70,7 @@ class Template
                                     Artesanias
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="<?php echo URL ?>Login">
-                                    Login
-                                </a>
-                            </li>
+                            
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Actividades
@@ -90,12 +86,13 @@ class Template
                                         Something else here
                                     </a>
                                 </div>
-                            </li>                                                                                       
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                    </form>
+                            </li>  
+                            <li class="nav-item">
+                                <div class="row justify-content-end ">
+                                        <img src="<?php echo URL?>Public/svg/usuario.svg" alt="ok" width="40" heigh="40" class="img-raised  img-fluid">  
+                                </div>                                                                    
+                            </li>                                    
+                    </ul>                   
                 </div>
             </nav>
             <?php } if (isset($_SESSION["nombre"])){ ?>

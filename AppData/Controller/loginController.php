@@ -35,6 +35,18 @@ class loginController
                 }
             }
         }
+        public function reset()
+        {
+            if(isset($_POST)) {
+                $this->login->set("nombre", $_POST["user"]);
+                $this->login->set("user", $_POST["name"]);
+                $this->login->set("telefono", $_POST["numero"]);
+                $datos = $this->login->recuperar();
+                print_r(json_encode(mysqli_fetch_assoc($datos)));                                    
+            }
+            
+        }
+
     public function logout()
         {
             session_destroy();

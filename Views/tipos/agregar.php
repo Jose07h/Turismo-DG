@@ -1,6 +1,6 @@
 <?php
 ?>
- <form class="needs-validation"  method="POST" action="<?php echo URL?>tipos/agregar" novalidate id="save_img" enctype="multipart/form-data" autocomplete="off">
+ <form class="was-validated"  method="POST" action="<?php echo URL?>tipos/agregar" novalidate id="save_img" enctype="multipart/form-data" autocomplete="off">
     <div class="container justify-content-md-center">
       <div class="py-5 text-center">
         <h2>Agregar</h2>
@@ -8,13 +8,11 @@
       </div>
       <div class="row justify-content-md-center">
         <div class="col-md-8 order-md-1">
-          <form class="needs-validation" novalidate>            
+            
             <div class="mb-3">
               <label for="imagen">Selecionar imagen</label>
-              <div class="custom-file">
-                <input type="file" class="custom-file-input" id="imagen" name="imagen"required>
-
-                <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+              <div class="form-group">
+                <input type="file" class="form-control" id="imagen" name="imagen"required value="buscar">
                 <div class="invalid-feedback" style="width: 100%;">Es nesesario selecionar una imagen</div>
               </div>
             </div>          
@@ -49,3 +47,6 @@
           <br>  
           <br>  
   </form>  
+
+
+<div>Icons made by <a href="https://www.flaticon.es/autores/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.es/"         title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"        title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>

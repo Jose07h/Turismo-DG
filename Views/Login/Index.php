@@ -32,8 +32,71 @@
                     <button href="#!" class="btn btn-primary" id="enviar" data-id="" type="submit">Enviar</button>    
                 </div>            
             </form>
-            <a href="#" class="forgot-password">
+            <a href="#" class="forgot-password" data-toggle="modal" data-target="#exampleModalCenter">
                 Ha olvidado la contraseña?
             </a>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Recuperar contraseña</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class=" col-mb-12 modal-body row justify-content-md-center">
+        <form id="restaurar" class="was-validated">
+          <div class="col-mb-12 ">
+            <label for="user">usuario</label>
+            <input type="text" class="form-control " id="user"  name="user"value="joseluis07h@gmail.com" required>
+            <div class="invalid-feedback">Campo requerido</div>
+          </div>
+          <div class="col-mb-12">
+            <label for="name">Nombre</label>
+            <input type="text" class="form-control " id="name" name="name" value="jose luis" required>
+            <div class="invalid-feedback">Campo requerido</div>
+          </div>  
+          <div class="col-mb-12 ">
+            <label for="numero">Telefono</label>
+            <input type="number" name="numero" step="any" class="form-control" value="7225637666" id="numero" required="">          
+            <div class="invalid-feedback">Campo requerido (Solo numeros)</div>
+          </div>                          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button"   class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        <button type="submit" id="ok" class="btn btn-primary">Restaurar</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#ok').click(function(){
+      $.post("<?php echo URL?>login/reset/",$("#restaurar").serialize(),function(res){
+        var datos=JSON.parse(res);
+        if (($.isEmptyObject(datos))==true){
+          alert("no coinsiden los regitros");
+        }else{
+          alert("tu contraseña es: " + datos['pass']);  
+        }        
+      });
+    });
+  });
+  
+</script>
+
+
+
+
+
+
+
+
+
+
+
         </div>
     </div>

@@ -68,9 +68,8 @@
             </div>
             <div class="mb-3">
               <label for="imagen">Selecionar imagen</label>
-              <div class="custom-file">
-                <input type="file" class="custom-file-input " id="imagen" name="imagen"  required>
-                <label class="custom-file-label" for="imagen">Choose file...</label>
+              <div class="form-group">
+                <input type="file" class="form-control" id="imagen" name="imagen"  required>
                 <div class="invalid-feedback" style="width: 100%;">Es nesesario selecionar una imagen</div>
               </div>
             </div>          
