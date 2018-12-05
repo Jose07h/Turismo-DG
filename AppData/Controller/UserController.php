@@ -48,7 +48,8 @@ class userController
 
     }
 
-    public function eliminar($id){ 
+    public function eliminar($id)
+    { 
         $this->user->delete($id[0]);
         $datos1=$this->user->getAll();
         $datos[0]=$datos1;
@@ -56,11 +57,10 @@ class userController
 
     }
 
-    public function modifica($id){    
-    $datos=$this->user->edit($id[0]);       
-
-    print_r(json_encode((mysqli_fetch_assoc($datos))));
-
+    public function modificar ($id) 
+    {    
+        $datos=$this->user->edit($id[0]);       
+        print_r(json_encode(mysqli_fetch_assoc($datos)));        
     }
     public function actualizar($id)
     {

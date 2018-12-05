@@ -147,7 +147,7 @@
     $(document).ready(function(){
       $("#body_table").on("click","button#out",function(){            
             var id=$(this).data("id");            
-            $.get("<?php echo URL?>user/modifica/"+id,function(res){              
+            $.get("<?php echo URL?>user/modificar/"+id,function(res){              
                 var datos=JSON.parse(res);
                 $("#id").val(datos["id"]);
                 $("#titulo").val(datos["titulo"]);
