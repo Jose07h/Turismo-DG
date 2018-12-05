@@ -12,14 +12,19 @@ while($row=mysqli_fetch_array($dato))
 		              <div>
 		                <label for=''>{$row[2]}</label>  
 		              </div>
+		              <div>
+		                <label for=''>{$row[5]}</label>  
+		              </div>
+		              <div>
+		                <label for=''>{$row[6]}</label>  
+		              </div>
 		             <div>
-		             	<a href='".URL."user/eliminar/{$row[0]}' class='btn tooltipped' data-position='bottom' data-tooltip='Eliminarr'>Eliminar       		
-		             	</a>
-		             	<a href='".URL."user/modificar/{$row[0]}' class='btn'>
-		             		Modificar
-		             	</a>
-		             </div> 		              
-		             
+		             	<button type='button' class='btn btn-primary' data-toggle='modal' id='cut'  data-id='{$row[0]}'>Eliminar       		
+		             	</button>
+		             	<button type='button' class='btn btn-primary' data-toggle='modal' id='out'  data-id='{$row[0]}'>
+                  			modificar
+                		</button>
+		             </div> 		              		             
 	            </div>
 	         </div>
         </div>";	

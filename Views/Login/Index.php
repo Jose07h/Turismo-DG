@@ -9,11 +9,11 @@
         <div class="card card-container">            
             <img id="profile-img" class="profile-img-card" src="<?php echo URL ?>Public/img/u.jpg"/>
             <p id="profile-name" class="profile-name-card"></p>
-            <form class="needs-validation"  method="POST" action="<?php echo URL?>login/login" novalidate id="save_img" enctype="multipart/form-data" autocomplete="off">
+            <form class="needs-validation"  method="POST" action="<?php echo URL?>login/verify" novalidate id="save_img" enctype="multipart/form-data" autocomplete="off">
                 <div class="mb-3">
                   <label for="nombre">Usuario</label>
                   <div class="input-group">
-                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Usuario" required>
+                    <input type="email" class="form-control" id="nombre" name="nombre" placeholder="Usuario" required>
                     <div class="invalid-feedback" style="width: 100%;">
                       Nombre requerido
                     </div>
@@ -22,7 +22,7 @@
                 <div class="mb-3">
                   <label for="pass">Contraseña</label>
                   <div class="input-group">
-                    <input type="text" class="form-control" id="pass" name="pass" placeholder="Contraseña" required>
+                    <input type="password" class="form-control" id="pass" name="pass" placeholder="Contraseña" required>
                     <div class="invalid-feedback" style="width: 100%;">
                       Contraseña requerida
                     </div>

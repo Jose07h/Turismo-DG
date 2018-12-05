@@ -22,11 +22,11 @@ class conexion
     {
         $this->conexion->query($sql) or die (mysqli_error($this->conexion));
     }
-    public function proc($a,$b,$c,$d)
+    public function proc($a,$b,$c,$d,$e,$f)
     {
-        $sql="insert into img(titulo,fecha,img,descr) values(?,?,?,?)";
+        $sql="insert into img(titulo,fecha,img,descr,tipo_id,ubicacion) values(?,?,?,?,?,?)";
         $stm=$this->conexion->prepare($sql) or die (mysqli_error($this->conexion));
-        $stm->bind_param('ssss',$a,$b,$c,$d);
+        $stm->bind_param('ssssss',$a,$b,$c,$d,$e,$f);
         $stm->execute();
 
     }

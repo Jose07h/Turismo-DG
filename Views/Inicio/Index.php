@@ -43,8 +43,8 @@
           <br>
           <br>
           <br>
-    <div class="container pie">
-      <div class="row" id="lista">
+    <div class="container">
+      <div class="row cont">
         <?php
           require_once ("tabla.php");
        ?>
@@ -54,3 +54,20 @@
   <br>
   <br>
   <br>
+<div id="cargaexterna">Aquí se cargará el HTML externo</div>
+
+
+  <script type="text/javascript">
+    /*$(document).ready(function(){
+        $(".btn_ver").click(function(){
+            var i=$(this).data("id");
+            i=JSON.stringify(i);
+            window.location("<?php echo URL?>inicio/show/?datos="+i);
+
+            //$.post("<?php //echo URL?>inicio/show", {coche:i}, function(res){
+              // $("#cargaexterna").html(res);
+
+            //});
+        });
+    })*/
+  </script>

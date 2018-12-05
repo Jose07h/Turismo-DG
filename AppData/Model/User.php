@@ -9,7 +9,7 @@ namespace AppData\Model;
 class User
 {
     private $tabla="img";
-    private $id, $fecha,$img,$descr,$titulo;
+    private $id, $fecha,$img,$descr,$titulo,$ubi,$tipos;
     function __construct()
     {
         $this->conexion=new conexion();
@@ -26,14 +26,14 @@ class User
     }
     function getAll()
     {
-        $sql="SELECT * from img";
+        $sql="select img.id,titulo, fecha, img.img, img.descr, tipos.descr, ubicacion.descr from img,tipos,ubicacion where tipos.id=img.tipo_id and ubicacion.id=img.ubicacion order by img.id;";
         $datos=$this->conexion->QueryResultado($sql);
         return $datos;
     }
     
     function add()
     {    
-        $stm=$this->conexion->proc($this->titulo,$this->fecha,$this->img,$this->descr);
+        $stm=$this->conexion->proc($this->titulo,$this->fecha,$this->img,$this->descr,$this->tipos,$this->ubi);
     }
     function delete($id)
     {
@@ -42,7 +42,7 @@ class User
     }
     function edit($id)
     {
-        $sql="select id,titulo,fecha,img,descr from {$this->tabla} where id='{$id}'";
+        $sql="select id,titulo,fecha,descr,tipo_id,ubicacion from {$this->tabla} where id='{$id}'";
         $datos=$this->conexion->queryResultado($sql);
         return $datos;
     }
@@ -55,5 +55,10 @@ class User
     function update(){
         $stm=$this->conexion->proc2($this->titulo,$this->fecha,$this->img,$this->descr,$this->id);
         
+    }
+    function grafica(){
+        $sql="select tipos.descr, count(tipo_id) from img ,tipos group by tipo_id";
+        $datos=$this->conexion->QueryResultado($sql);
+        return $datos;        
     }
 }

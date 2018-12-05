@@ -10,10 +10,8 @@ while($row=mysqli_fetch_array($dato))
 	            <div class='card-body'>
 	              	<h5 class='card-title'>{$row[2]}</h5>	             
 		          	<div>
-			          	<a href='".URL."tipos/eliminar/{$row[0]}' class='btn tooltipped' data-position='bottom' data-tooltip='Eliminarr'>Eliminar       		
-			          	</a>
-			          	<a href='".URL."tipos/modificar/{$row[0]}' class='btn'>
-			             	Modificar
+			        <button type='button' class='btn btn-primary' data-toggle='modal' id='cut'  data-id='{$row[0]}'>Eliminar </button>	
+			        <a href='".URL."tipos/modificar/{$row[0]}' class='btn btn-primary'> Modificar
 			            </a>
 		        	</div> 		              		        
 	            </div>

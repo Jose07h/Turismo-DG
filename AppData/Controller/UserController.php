@@ -2,19 +2,27 @@
 namespace AppData\Controller;
 class userController
 {
-    private $user,$Tipo_tarea,$empleados,$habitaciones,$herramientas;
+    private $user,$tipos,$ubi;
     public function __construct()
     {
         $this->user= new \AppData\Model\User();    
+        $this->ubi= new \AppData\Model\ubicacion();    
+        $this->tipos= new \AppData\Model\tipos();    
+
     }
     public function index()
     {
         $datos1=$this->user->getAll();
+        $datos2=$this->ubi->getAll();
+        $datos3=$this->tipos->getAll();
         $datos[0]=$datos1;
+        $datos[1]=$datos2;
+        $datos[2]=$datos3;
         return $datos;
     }
     public function agregar()
     {
+        
         if($_POST)
         {
         $nombre=$_FILES['imagen']['name'];
@@ -25,23 +33,38 @@ class userController
             $this->user->set('fecha',$_POST["fecha"]);
             $this->user->set('img',$bytes);
             $this->user->set('descr',$_POST["descripcion"]);
+            $this->user->set('ubi',$_POST["ubi"]);
+            $this->user->set('tipos',$_POST["tipos"]);
             $this->user->add();
             header("Location:".URL."user");
+        }
+        else{
+            $datos1=$this->ubi->getAll();
+            $datos2=$this->tipos->getAll();        
+            $datos[0]=$datos1;
+            $datos[1]=$datos2;
+            return $datos;   
         }
 
     }
 
-      public function eliminar($id){
-       $this->user->delete($id[0]);
-       header("Location:".URL."user");
+    public function eliminar($id){ 
+        $this->user->delete($id[0]);
+        $datos1=$this->user->getAll();
+        $datos[0]=$datos1;
+        return $datos;   
+
     }
 
-    public function modificar($id){
-        $datos=$this->user->edit($id[0]);        
-        return $datos;
+    public function modifica($id){    
+    $datos=$this->user->edit($id[0]);       
+
+    print_r(json_encode((mysqli_fetch_assoc($datos))));
+
     }
     public function actualizar($id)
     {
+        print_r($_POST);
         if($_POST)
         {
         $nombre=$_FILES['imagen']['name'];
@@ -56,13 +79,16 @@ class userController
             $this->user->update();
             header("Location:".URL."user");
         }
+
     }
     public function print_pdf()
     {
+        $datos=$this->user->getAll();
+        return $datos;
     }
     public function graficar()
     {
-        $datos=$this->Tareas->graficar();
+        $datos=$this->user->grafica();
         return $datos;
     }
 

@@ -31,7 +31,9 @@ class tiposController
 
       public function eliminar($id){
        $this->tipos->delete($id[0]);
-       header("Location:".URL."tipos");
+       $datos1=$this->tipos->getAll();
+        $datos[0]=$datos1;
+        return $datos;
     }
 
     public function modificar($id){

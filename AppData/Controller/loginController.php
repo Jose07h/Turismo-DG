@@ -14,24 +14,30 @@ class loginController
             $datos[0]=$datos1;
             return $datos;   
         }
-    public function login(){
-            
-        print_r($_POST['nombre']);
-        print_r($_POST['pass']);
-        if($_POST)
+    public function verify()
         {
-            $this->login->set('nombre',$_POST["nombre"]);
-            $this->login->set('pass',$_POST["pass"]);
-            $datos=$this->login->comprobar();
-            if (mysqli_num_rows($datos) > 0) {
+            $_SESSION["error_login"]="";
+
+            if(isset($_POST)) {
+                $this->login->set("nombre", $_POST["nombre"]);
+                $this->login->set("pass", $_POST["pass"]);
+                $datos = $this->login->comprobar();
+                if (mysqli_num_rows($datos) > 0) {
                     $datos=mysqli_fetch_assoc($datos);
-                    $_SESSION["username"]=$datos["email"];
-                    header("Location:" . URL . "user");
-            }
-            else {
+                    $_SESSION["nombre"]=$datos["nombre"];
+                    header("Location:" . URL . "bienvenido");
+                    echo($_SESSION["nombre"]);
+
+                }
+                else {
                     $_SESSION["error_login"] = "los datos no coinciden con nuestros registros";
                     header("Location:" . URL . "login");
+                }
             }
         }
-    }
+    public function logout()
+        {
+            session_destroy();
+           // header("Location:".URL);
+        }
 }

@@ -25,10 +25,12 @@ class Template
             <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/popper.min.js"></script>
             <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/holder.min.js"></script>
             <script type="text/javascript" src="<?php echo URL ?>Public/js/bootstrap.min.js" ></script>
+<!--            <script type="text/javascript" src="<?php echo URL?>Public/js/highcharts.js"></script>-->
             <!--<script type="text/javascript" src="<?php //echo URL ?>Public/js/feather.min.js"></script>-->
             <script type="text/javascript" src="<?php echo URL?>Public/js/jquery.validate.min.js"></script>
         </head>
         <body>  
+            <?php if(!isset($_SESSION["nombre"])) { ?>
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
                 <img src="<?php echo URL?>Public/img/logo_trans.png" width="150px" alt="Thumbnail Image" class="img-raised  img-fluid">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
@@ -36,47 +38,44 @@ class Template
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
+
                         <li class="nav-item active">
                             <a class="nav-link" href="<?php echo URL?>inicio">
                                 Conociendo Donato Guerra 
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                            Costumbres y tradiciones
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Artesanias
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="<?php echo URL ?>Login">
-                                Login
-                            </a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Actividades
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="<?php echo URL ?>Actividades">
-                                    Campismo
+                        
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                Costumbres y tradiciones
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    Ciclismo
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    Artesanias
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    Something else here
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo URL ?>Login">
+                                    Login
                                 </a>
-                            </div>
-                        </li>
-                         <li class="nav-item">
-                            <a class="nav-link" href="<?php echo URL ?>user">
-                                user(tmp)
-                            </a>
-                        </li>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Actividades
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="<?php echo URL ?>Actividades">
+                                        Campismo
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Ciclismo
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        Something else here
+                                    </a>
+                                </div>
+                            </li>                                                                                       
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                         <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
@@ -84,18 +83,50 @@ class Template
                     </form>
                 </div>
             </nav>
-            <main class="container-fluid md-12">
+            <?php } if (isset($_SESSION["nombre"])){ ?>
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+                <img src="<?php echo URL?>Public/img/logo_trans.png" width="150px" alt="Thumbnail Image" class="img-raised  img-fluid">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo URL ?>user">
+                                    user(tmp)
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo URL ?>tipos">
+                                tipos
+                                </a>
+                            </li>                           
+                            <li>
+                                <a class="nav-link" href="<?php echo URL?>login/logout">
+                                    Salir
+                                </a>
+                            </li>         
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </nav>
+            <?php } ?>
+            <main class="container-fluid">
             <br>
             <br>
             <br>
     <?php
     }
+
     public static function footer()
     {
     ?>
             </main>
             <footer class="page-footer font-small mdb-color pt-4 badge-dark">
-                <div class="container text-center text-md-left">
+                <div class="container-fluid text-center text-md-left">
                     <div class="row text-center text-md-left mt-3 pb-3">
                         <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
                             <h5 class="text-uppercase mb-4 font-weight-bold">Contáctanos</h5>
@@ -104,23 +135,11 @@ class Template
                             <label>+ 01 234 567 88</label>
                             <label>+ 01 234 567 89</label>
                         </div>
-                        <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                            <h5 class="text-uppercase mb-4 font-weight-bold">Ubicación</h5>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Mapa</button>
-                            <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                              <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title text-secondary" id="exampleModalLabel">Ubicación</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                          <span aria-hidden="true">&times;</span>
-                                        </button>
-                                      </div>
-                                    <div>
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15061.361392893625!2d-100.15055793305281!3d19.31103209125391!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d29e7e699ac01f%3A0x54fbeac5bbe65d12!2sVilla+Donato+Guerra%2C+M%C3%A9x.!5e0!3m2!1ses-419!2smx!4v1539572910254" width="798" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
-                                    </div>            
-                                </div>
-                              </div>
+                            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                                <h5 class="text-uppercase mb-4 font-weight-bold">Ubicación</h5>
+                                    <a class="nav-link" href="<?php echo URL?>ubicacion">
+                                    Mapa
+                                </a>
                             </div>
                         </div>
                             
