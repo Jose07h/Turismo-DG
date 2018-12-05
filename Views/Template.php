@@ -29,8 +29,22 @@ class Template
             <!--<script type="text/javascript" src="<?php //echo URL ?>Public/js/feather.min.js"></script>-->
             <script type="text/javascript" src="<?php echo URL?>Public/js/jquery.validate.min.js"></script>
         </head>
-        <body>  
+
+        <body>   
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = 'https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v3.2';
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+            
             <?php if(!isset($_SESSION["nombre"])) { ?>
+
+        
+
+       
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
                 <img src="<?php echo URL?>Public/img/logo_trans.png" width="150px" alt="Thumbnail Image" class="img-raised  img-fluid">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" >
@@ -118,6 +132,7 @@ class Template
             <br>
             <br>
             <br>
+
     <?php
     }
 
@@ -155,6 +170,7 @@ class Template
                                     <strong> MDBootstrap.com</strong>
                                 </a>
                             </p>
+                            <div class="fb-comments" data-href="http://localhost/Turismo-DG/" data-width="100%" data-numposts="7"></div>
                         </div>
                         <div class="col-md-5 col-lg-4 ml-lg-0">
                             <div class="text-center text-md-right">

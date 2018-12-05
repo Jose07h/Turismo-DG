@@ -1,12 +1,9 @@
 <?php
-
 namespace AppData\Model;
-
-
 class conexion
 {
 
-    private $datos=array("server"=>"localhost","user"=>"root","password"=>"", "base"=>"Malacatepec");
+    private $datos=array("server"=>"localhost","user"=>"root","password"=>"", "base"=>"malacatepec");
     public $stm;
 
 
