@@ -20,10 +20,10 @@
                         <img class="d-block w-100" src="<?php echo URL?>Public/img/entra.jpg" alt="Second slide" width="90px" height="650">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo URL?>Public/img/mira.jpg" alt="Fourth slide" width="90px" height="650">
+                        <img class="d-block w-100" src="<?php echo URL?>Public/img/elcapulin.jpg" alt="Fourth slide" width="90px" height="650">
                       </div>
                       <div class="carousel-item">
-                        <img class="d-block w-100" src="<?php echo URL?>Public/img/casca.jpg" alt="Five slide" width="90px" height="650">
+                        <img class="d-block w-100" src="<?php echo URL?>Public/img/cascadaasuncion.jpg" alt="Five slide" width="90px" height="650">
                       </div>
                       <div class="carousel-item">
                         <img class="d-block w-100" src="<?php echo URL?>Public/img/fondo.jpg" alt="Six slide" width="90px" height="650">

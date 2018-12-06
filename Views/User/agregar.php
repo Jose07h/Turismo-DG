@@ -1,4 +1,6 @@
 <?php    
+// print_r($hora= new DateTime("now", new DateTimeZone('America/Mexico_City')));
+
 ?>
     <div class="container justify-content-md-center">
       <div class="py-5 text-center">
@@ -82,4 +84,6 @@
       <br>
       <br>
       <br>
+
+
 

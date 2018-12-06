@@ -8,10 +8,7 @@
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
                 <a class="nav-link btn btn-sm btn-outline-secondary" href="<?php echo URL ?>user/agregar">Agregar</a>
-                <a class="nav-link btn btn-sm btn-outline-secondary" target="_blank" href="<?php echo URL ?>user/print_pdf">Imprimir</a>                
-                <button type="button" class="btn btn-primary" data-toggle="modal" id="out">
-                  modificar
-                </button>
+                <button class="nav-link btn btn-sm btn-outline-secondary imp" target="_blank" href="#">Imprimir</button> 
                 <button type="button" class="btn btn-primary" id="out" data-toggle="modal">grafica</button>
                 <a href="#!"  id="graficar_tareas" class="btn cyan lighten-2 accent-3 black-text tooltipped " data-position="bottom" data-delay="50" data-tooltip="Graficar"></a>
               </div>
@@ -170,6 +167,10 @@
         });
 
     })
+    $('.imp').click(function(){
+        window.open('<?php echo URL ?>user/print_pdf')
+    })
+
 </script>
 
 

@@ -87,12 +87,14 @@ class Template
                                     </a>
                                 </div>
                             </li>  
-                            <li class="nav-item">
-                                <div class="row justify-content-end ">
-                                        <img src="<?php echo URL?>Public/svg/usuario.svg" alt="ok" width="40" heigh="40" class="img-raised  img-fluid">  
-                                </div>                                                                    
-                            </li>                                    
-                    </ul>                   
+                    </ul>
+                        <div class="row  align-self-start ">
+                            <div class="col align-self-center">
+                                <a href="<?php echo URL  ?>Login" >
+                                    <img src="<?php echo URL?>Public/svg/user.svg" alt="ok" width="40" heigh="40" class="img-raised  img-fluid">  
+                                </a>
+                            </div> 
+                        </div>                                                                    
                 </div>
             </nav>
             <?php } if (isset($_SESSION["nombre"])){ ?>
@@ -112,17 +114,17 @@ class Template
                                 <a class="nav-link" href="<?php echo URL ?>tipos">
                                 tipos
                                 </a>
-                            </li>                           
-                            <li>
-                                <a class="nav-link" href="<?php echo URL?>login/logout">
-                                    Salir
-                                </a>
-                            </li>         
+                            </li>                                                              
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-                    </form>
+                    <div class="btn-group dropleft" style="margin-right:12%;">
+                      <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img src="<?php echo URL ?>Public/svg/usuario.svg" width="30" heigh="30">
+                      </a>
+                      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="<?php echo URL ?>login/logout">Salir</a>
+                        <a class="dropdown-item" href="#"> <?php echo $_SESSION["nombre"] ?></a>
+                      </div>
+                    </div>
                 </div>
             </nav>
             <?php } ?>
