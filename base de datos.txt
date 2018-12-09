@@ -5,10 +5,20 @@ create table Tipo_act(id_tipoact int primary key, descripcion varchar (50));
 create table Asigna_act(id_asigna int primary key,id_actividad int,id_horario int,id_dia int);
 create table Horario(id_horario int primary key, hora time);
 create table Dias(id_dias int primary key, dias varchar(15));
-create table img(id int primary key auto_increment,titulo varchar (30),fecha date,img longblob,descr varchar(100),tipo_id int,ubicacion int);
-create table tipos (id int primary key auto_increment,img longblob, descr varchar(40));
+
+
+create table img(id int primary key auto_increment,titulo varchar (30),fecha date,img longblob,
+descr varchar(100),tipo_id int,ubicacion int,
+estado int);
+create table tipos (id int primary key auto_increment,img longblob, descr varchar(40),
+estado int);
+
 create table ubicacion (id int primary key, descr varchar(60));
+
+
 create table usuario ( id int primary key auto_increment , nombre varchar(40), pass varchar(20), user varchar(20), telefono varchar(14));
+
+
 INSERT INTO `malacatepec`.`usuario` (`id`, `nombre`, `pass`, `user`, `telefono`) VALUES ('1', 'joseluis07h@gmail.com', '12345', 'jose luis', '7225637666'); 	 	
 insert into ubicacion values(	55	,   'Ampliación de Santiago Huitlapaltepec');
 insert into ubicacion values(	56	,	'Barrio de Arriba de San Juan Xoconusco');

@@ -9,7 +9,10 @@
 
      }
 ?>
+<div id="container_grafica"></div>
+
 <script type="text/javascript">
+
      Highcharts.chart('container_grafica', {
              chart: {
                  type: 'column'
@@ -23,7 +26,7 @@
          yAxis: {
                  min: 0,
                      title: {
-                         text: 'cantidad de historias'
+                         text: 'Repeticiones'
                      },
                  stackLabels: {
                          enabled: true,
@@ -58,7 +61,7 @@
                      }
              },
          series: [{
-             name: 'Reparaciones',
+             name: 'Imagenes',
                  data: <?php echo json_encode($vary)?>
          }]
      });

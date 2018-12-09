@@ -62,6 +62,19 @@ class userController
         $datos=$this->user->edit($id[0]);       
         print_r(json_encode(mysqli_fetch_assoc($datos)));        
     }
+    public function getimg ($id) 
+    {    
+        $datos=$this->user->getImg($id[0]);
+        while($row=mysqli_fetch_array($datos))
+        {
+            echo "
+                <div class='col-sm'>"
+                ?>
+                    <img class='card-img-top' alt='Card image cap' style=' height:80px;' src='data:image/jpg; base64, <?php echo base64_encode($row[0]); ?>'/>
+                <?php echo"                
+                </div>";    
+        }   
+    }
     public function actualizar($id)
     {
         print_r($_POST);

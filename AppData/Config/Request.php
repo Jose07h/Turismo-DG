@@ -41,29 +41,45 @@ class Request
             }
       }
       else
-          if (isset($_GET['url'])?stristr($_GET['url'],'login'):false)
-        {
-            $this->controlador="login";
-
-
-            if(isset($_POST["nombre"]))
-                $this->metodo = "verify";
-            else if(isset($_POST["numero"]))
-                $this->metodo = "reset";        
+            if (isset($_GET['url'])?stristr($_GET['url'],'login'):false)
+            {
+                $this->controlador="login";
+                if(isset($_POST["nombre"]))
+                    $this->metodo = "verify";
+                else if(isset($_POST["numero"]))
+                    $this->metodo = "reset";        
+                else
+                    $this->metodo = "index";
+            }
+            else if (isset($_GET['url'])?stristr($_GET['url'],'inicio'):false)
+            {
+                $this->controlador="inicio";
+                if(isset($_POST["id"]))
+                    $this->metodo = "show";             
+                else if(isset($_POST["datos"]))
+                    $this->metodo = "datos";    
+                else if(isset($_POST["img"]))
+                    $this->metodo = "getimg";    
+                else
+                    $this->metodo = "index";   
+             
+            }
+            else if (isset($_GET['url'])?stristr($_GET['url'],'ubicacion'):false)
+            {
+                $this->controlador="ubicacion";                            
+                $this->metodo = "index";               
+            }
+            else if (isset($_GET['url'])?stristr($_GET['url'],'acerca'):false)
+            {
+                $this->controlador="acerca";                            
+                $this->metodo = "index";               
+            }
             else
+            {
+                $this->controlador="inicio";
                 $this->metodo = "index";
-        }
-        else if (isset($_GET['url'])?stristr($_GET['url'],'inicio'):false)
-        {
-            $this->controlador="inicio";
-            $this->metodo=stristr($_GET['url'],'show()')?"show()":"index";
-        }
-        else
-        {
-            $this->controlador="inicio";
-            $this->metodo = "index";
 
-        }
+            }
 
     }
     public function getControlador()

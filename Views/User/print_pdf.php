@@ -2,7 +2,7 @@
 require('Public/fpdf/fpdf.php');
 class PDF extends FPDF
 {
-	
+
 	function Header()
 	{   date_default_timezone_set('America/Mexico_City');
 	    $this->SetFont('Arial','B',15); 
@@ -10,8 +10,9 @@ class PDF extends FPDF
 	    $this->Cell(30,10,'Turismo Donato Duerra',0,0,'C'); 
 	    $this->SetFont('Arial','I',10);
 	    $this->Ln();
-		$this->Cell(190,7,'Reporte generado el '.date('d/m/Y').' a las '.date('h:i:s').' por: '.$_SESSION["nombre"],0,0,'C');
-	    
+	   	$this->Cell(190,10,URL,0,0,'C'); 
+	    $this->Ln();
+		$this->Cell(190,7,'Reporte generado el '.date('d/m/Y').' a las '.date('h:i:s').' por: '.$_SESSION["nombre"],0,0,'C');	    
 	}
 	function Footer()
 	{
@@ -23,6 +24,7 @@ class PDF extends FPDF
 	    $this->Cell(0,10,'Page '.$this->PageNo().'/{nb}',0,0,'C');
 	}	
 }
+
 $pdf = new PDF();
 $pdf->AliasNbPages();
 $pdf->AddPage();

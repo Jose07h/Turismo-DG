@@ -26,7 +26,7 @@ class tipos
     }
     function getAll()
     {
-        $sql="SELECT * from tipos";
+        $sql="SELECT * from tipos where estado=1";
         $datos=$this->conexion->QueryResultado($sql);
         return $datos;
     }
@@ -37,7 +37,9 @@ class tipos
     }
     function delete($id)
     {
-        $sql="delete from {$this->tabla} where id='{$id}'";
+        
+        $sql="UPDATE tipos SET estado=0 WHERE id='{$id}'";    
+
         $this->conexion->querysimple($sql);
     }
     function edit($id)

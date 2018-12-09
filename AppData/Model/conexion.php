@@ -21,17 +21,20 @@ class conexion
     }
     public function proc($a,$b,$c,$d,$e,$f)
     {
-        $sql="insert into img(titulo,fecha,img,descr,tipo_id,ubicacion) values(?,?,?,?,?,?)";
+                $e='1';
+
+        $sql="insert into img(titulo,fecha,img,descr,tipo_id,ubicacion,estado) values(?,?,?,?,?,?,?)";
         $stm=$this->conexion->prepare($sql) or die (mysqli_error($this->conexion));
-        $stm->bind_param('ssssss',$a,$b,$c,$d,$e,$f);
+        $stm->bind_param('sssssss',$a,$b,$c,$d,$e,$f,$e);
         $stm->execute();
 
     }
     public function tiposadd($c,$d)
     {
-        $sql="insert into tipos(img,descr) values(?,?)";
+        $e='1';
+        $sql="insert into tipos(img,descr,estado) values(?,?,?)";
         $stm=$this->conexion->prepare($sql) or die (mysqli_error($this->conexion));
-        $stm->bind_param('ss',$c,$d);
+        $stm->bind_param('sss',$c,$d,$e);
         $stm->execute();
 
     }

@@ -26,7 +26,7 @@ class User
     }
     function getAll()
     {
-        $sql="select img.id,titulo, fecha, img.img, img.descr, tipos.descr, ubicacion.descr from img,tipos,ubicacion where tipos.id=img.tipo_id and ubicacion.id=img.ubicacion order by img.id;";
+        $sql="select img.id,titulo, fecha, img.img, img.descr, tipos.descr, ubicacion.descr from img,tipos,ubicacion where tipos.id=img.tipo_id and img.estado=1 and ubicacion.id=img.ubicacion order by img.id;";
         $datos=$this->conexion->QueryResultado($sql);
         return $datos;
     }
@@ -37,7 +37,7 @@ class User
     }
     function delete($id)
     {
-        $sql="delete from {$this->tabla} where id='{$id}'";
+        $sql="UPDATE img SET estado=0 WHERE id='{$id}'";    
         $this->conexion->querysimple($sql);
     }
     function edit($id)
@@ -52,12 +52,18 @@ class User
         $datos=$this->conexion->QueryResultado($sql);
         return $datos;
     }
+    function getImg($id)
+    {
+        $sql="SELECT img FROM img where id='{$id}'";
+        $datos=$this->conexion->QueryResultado($sql);
+        return $datos;
+    }
     function update(){
         $stm=$this->conexion->proc2($this->titulo,$this->fecha,$this->img,$this->descr,$this->id);
         
     }
     function grafica(){
-        $sql="select tipos.descr, count(tipo_id) from img ,tipos group by tipo_id";
+    $sql="select tipos.descr, count(img.tipo_id) from img ,tipos where img.estado=1 and img.tipo_id=tipos.id group by img.tipo_id;";
         $datos=$this->conexion->QueryResultado($sql);
         return $datos;        
     }

@@ -25,7 +25,7 @@ class Template
             <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/popper.min.js"></script>
             <script type="text/javascript" src="<?php echo URL ?>Public/assets/js/vendor/holder.min.js"></script>
             <script type="text/javascript" src="<?php echo URL ?>Public/js/bootstrap.min.js" ></script>
-<!--            <script type="text/javascript" src="<?php echo URL?>Public/js/highcharts.js"></script>-->
+            <script type="text/javascript" src="<?php echo URL?>Public/js/highcharts.js"></script>
             <!--<script type="text/javascript" src="<?php //echo URL ?>Public/js/feather.min.js"></script>-->
             <script type="text/javascript" src="<?php echo URL?>Public/js/jquery.validate.min.js"></script>
         </head>
@@ -42,9 +42,6 @@ class Template
         </script>
             
             <?php if(!isset($_SESSION["nombre"])) { ?>
-
-        
-
        
             <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
                 <img src="<?php echo URL?>Public/img/logo_trans.png" width="150px" alt="Thumbnail Image" class="img-raised  img-fluid">
@@ -61,32 +58,15 @@ class Template
                         </li>
                         
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                Costumbres y tradiciones
+                                <a class="nav-link"  href="<?php echo URL?>Acerca">
+                                Acerca de DONATO GUERRA
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Artesanias
+                                <a class="nav-link" target="_blank" href="http://donatoguerra.gob.mx/turistico/inicio.php">
+                                    Pagina official Donato guerra
                                 </a>
-                            </li>
-                            
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Actividades
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="<?php echo URL ?>Actividades">
-                                        Campismo
-                                    </a>
-                                    <a class="dropdown-item" href="#">
-                                        Ciclismo
-                                    </a>
-                                    <a class="dropdown-item" href="#">
-                                        Something else here
-                                    </a>
-                                </div>
-                            </li>  
+                            </li>                                                    
                     </ul>
                         <div class="row  align-self-start ">
                             <div class="col align-self-center">
@@ -107,12 +87,12 @@ class Template
                     <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo URL ?>user">
-                                    user(tmp)
+                                    Principal
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="<?php echo URL ?>tipos">
-                                tipos
+                                Tipos
                                 </a>
                             </li>                                                              
                     </ul>

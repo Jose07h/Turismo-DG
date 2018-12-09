@@ -43,8 +43,26 @@
           <br>
           <br>
           <br>
+          <div class="container">            
+            <div class="text-center">
+              <h1>Donato Guerra  </h1>
+              <h2>Municipio en México</h2>
+
+            </div>
+            <div class="text-center">
+              <h3>Descripción</h3>
+              <h5>Donato Guerra es uno de los 125 municipios del Estado de México, se encuentra dentro del Valle de Quencio. Limita al norte con Villa de Allende, al oeste con Zitácuaro, al sur con Ixtapan del Oro y Valle de Bravo y al este con Amanalco de Becerra</h5>              
+              <br>
+              <h6>Elevación: 2.200 m</h6>
+              <h6>Superficie: 192.189 km²</h6>
+              <h6>Hoteles: Precio promedio: $1,235 en hotel tres estrellas, $4,393 en hotel cinco estrellas</h6>
+              <h6>Población: 29.621 (2005)</h6>
+              <h6>Tiempo: 16 °C, viento del S a 2 km/h, humedad del 69 %  </h6>                                    
+            </div>            
+
+          </div>
     <div class="container">
-      <div class="row cont">
+      <div class="row cont body_table">
         <?php
           require_once ("tabla.php");
        ?>
@@ -54,20 +72,7 @@
   <br>
   <br>
   <br>
-<div id="cargaexterna">Aquí se cargará el HTML externo</div>
-
-
   <script type="text/javascript">
-    /*$(document).ready(function(){
-        $(".btn_ver").click(function(){
-            var i=$(this).data("id");
-            i=JSON.stringify(i);
-            window.location("<?php echo URL?>inicio/show/?datos="+i);
-
-            //$.post("<?php //echo URL?>inicio/show", {coche:i}, function(res){
-              // $("#cargaexterna").html(res);
-
-            //});
-        });
-    })*/
+    $(document).ready(function(){
+    })
   </script>
